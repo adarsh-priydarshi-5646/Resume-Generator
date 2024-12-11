@@ -113,9 +113,36 @@ button:hover {
 }
 
 @media print {
+    @page {
+        size: A4;
+        margin: 5mm;
+    }
     body {
-        background: white;
-        color: black;
+        font-size: 10pt;
+        padding: 0;
+        margin: 0;
+    }
+    .resume {
+        page-break-before: always;
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+        margin: 0;
+    }
+    .resume-header .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+    .resume-section h2 {
+        font-size: 12pt;
+    }
+    .resume-section p, .resume-section ul li {
+        font-size: 10pt;
+    }
+    .resume-section a {
+        font-size: 10pt;
+        color: #8000ff;
+        text-decoration: none;
     }
     button {
         display: none;
